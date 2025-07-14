@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kay Thuhlo-Cakeni - Full Stack Java Developer Portfolio" />
+    <title>Kay Thuhlo | Full Stack Java Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Kay</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1>Hi, I'm Kay</h1>
+                <p class="tagline">I build full stack Java applications with purpose and precision.</p>
+                <p class="description">
+                    I'm a  developer, thinker, and creator. My passion lies in building clean user experiences and turning big ideas into powerful systems - like Ideantology.
+                </p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/kay-profile.jpg" alt="Kay Thuhlo" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I'm currently studying Computer Science at TUT. I bring clarity to complexity through well-structured code and thoughtful design. I'm also the creator of <strong>Ideantology</strong>, a growing philosophy about the life of ideas.</p>
+    </section>
+
+    <section id="experience" class="section">
+        <h2>Experience</h2>
+        <p>
+            My experience includes academic projects and freelance work as tech support.I've worked with HTML, CSS, JavaScript, Java(Spring Boot), MongoDB, MySQL, PL/SQL, and version control using Git.
+        </p>
+    </section>
+
+    <section id="work" class="section">
+        <h2>Featured work</h2>
+        <p>
+            <ul class="project-list">
+                <li><strong>Ideantology</strong> A personal philosophy turned digital brand.</li>
+                <li><strong>Impact Project</strong> - A practical build to demonstrate technical skill (Coming Soon).</li>
+                <li><strong>Portfolio Website</strong> Designed and coded by me, inspired by professionals.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section id="clients" class="section">
+        <h2>Clients & Collaborations</h2>
+        <p>
+            While I'm early in my career, I aim to collaborate with startups, civic tech projects, and socially driven brands - where thoughtful technology makes a difference.
+        </p>
+    </section>
+
+    <section id="testimonials" class="section">
+        <h2>Testimonials</h2>
+        <p>
+            "Kay is driven, technically curious, and always willing to learn. He brings energy and intent into everything he touches." - A colleague
+        </p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Let's Connect</h2>
+        <p>Email: <a href="mailto:kaythuhlo@gmail.com">kaythuhlo@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/thuhlokay/" target="_blank">github.com/thuhlokay</a></p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kay Thuhlo-Cakeni. All rights reserved. "Ideantology" is a registered trademark.</p>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const heroHeight = document.querySelector(".hero").offsetHeight;
+
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                navbar.classList.add("hidden");
+            } else {
+                navbar.classList.remove("hidden");
+            }
+
+            if(scrollTop > heroHeight - 80) {
+                navbar.classList.add("solid");
+            }else {
+                navbar.classList.remove("solid");
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+
+</body>
+</html>
