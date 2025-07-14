@@ -205,6 +205,21 @@ footer {
     margin-top: 2rem;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
 @media (max-width: 768px) {
     
     .hero-wrapper {
@@ -230,7 +245,32 @@ footer {
     }
 
     .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
         gap: 1rem;
-        font-size: 0.95rem;
+        padding: 1rem;
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        color: var(--text-dark);
     }
 }

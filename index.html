@@ -13,8 +13,12 @@
     <header class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo">Kay</div>
-            <nav>
-                <ul class="nav-links">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            <nav id="mobileMenu" class="nav-links">
+                <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#work">Work</a></li>
@@ -109,6 +113,15 @@
                 navbar.classList.remove("solid");
             }
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
         });
     </script>
 
