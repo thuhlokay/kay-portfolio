@@ -62,7 +62,7 @@ body{
 }
 
 .logo img {
-    height: 40px;
+    height: 80px;
     width: auto;
     vertical-align: middle;
 }
@@ -227,6 +227,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .logo img {
+        height: 30px;
+    }
     
     .hero-wrapper {
         flex-direction: column;
