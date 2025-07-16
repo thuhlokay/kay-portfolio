@@ -2,128 +2,241 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kay Thuhlo-Cakeni - Full Stack Java Developer Portfolio" />
-    <title>Kay Thuhlo | Full Stack Java Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kay Thuhlo-Cakeni - Full Stack Java Developer Portfolio" />
+  <title>Kay Thuhlo | Full Stack Java Developer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="logo"><a href="#" class="logo"><img src="assets/logo.png" alt="Kay Logo" /></a></div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            <nav id="mobileMenu" class="nav-links">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#clients">Clients</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <header class="navbar">
+    <div class="container">
+      <img src="assets/logo.png" alt="Kay Logo" class="logo" />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+          <span class="hamburger" id="hamburger">&#9776;</span>
         </div>
-    </header>
+      </nav>
+    </div>
+  </header>
 
-    <section id="hero" class="hero">
-        <div class="hero-wrapper">
-            <div class="hero-content">
-                <h1>Hi, I'm Kay</h1>
-                <p class="tagline">I build full stack Java applications with purpose and precision.</p>
-                <p class="description">
-                    I'm a  developer, thinker, and creator. My passion lies in building clean user experiences and turning big ideas into powerful systems - like Ideantology.
-                </p>
-                <a href="#contact" class="btn">Get In Touch</a>
-            </div>
-            <div class="hero-image">
-                <img src="assets/kay-profile.jpg" alt="Kay Thuhlo" class="profile-img">
-            </div>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-img-wrapper">
+      <img src="assets/kay-profile.jpg" alt="Kay Profile Image" class="hero-img" />
+    </div>
+    <div class="hero-content">
+      <h1>Hi, I'm Kay</h1>
+      <p>I build full stack Java applications with purpose and precision.
+        I'm a developer, thinker, and creator. My passion lies in building clean user experiences and turning big
+        ideas into powerful systems - like Ideantology.
+      </p>
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+
+    
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      I am a final-year Computer Science student at Tshwane University of Technology with expertise in enterprise Java and Jakarta EE technologies, including Servlets, JPA, and RESTful services. I also have practical experience developing Android applications using Kotlin.
+    </p>
+    <p>
+      I have launched a professional portfolio and the innovation-focused brand Ideantology, demonstrating my commitment to delivering scalable and user-centered solutions.
+    </p>
+    <p>
+      I am currently seeking internship or junior developer opportunities to apply my skills and advance as a full-stack Java developer focused on building robust web and mobile applications.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+      <p>
+        Experience with Java, JPA, Servlets, Kotlin, Android Studio, MySQL, REST APIs, Git, GitHub, Agile workflows,
+        and modern web technologies. Comfortable with both front-end and back-end work.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="assets/ideantology-logo.png" alt="Ideantology Logo" />
+          <h3><a href="ideantology.html" target="_blank">Ideantology</a></h3>
+          <p>A platform for idea management and collaboration, built with Java and Spring Boot.</p>
         </div>
-    </section>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I'm currently studying Computer Science at TUT. I bring clarity to complexity through well-structured code and thoughtful design. I'm also the creator of <strong>Ideantology</strong>, a growing philosophy about the life of ideas.</p>
-    </section>
+        <div class="project-card">
+          <img src="assets/logo.png" alt="Portfolio Project" />
+          <h3><a href="https://github.com/thuhlokay/kay-portfolio" target="_blank">Portfolio Website</a></h3>
+          <p>This very site, built with HTML, CSS, GitHub Pages, and a touch of style.</p>
+        </div>
 
-    <section id="experience" class="section">
-        <h2>Experience</h2>
-        <p>
-            My experience includes academic projects and freelance work as tech support.I've worked with HTML, CSS, JavaScript, Java(Spring Boot), MongoDB, MySQL, PL/SQL, and version control using Git.
-        </p>
-    </section>
+        <div class="project-card">
+          <img src="assets/coming-soon.png" alt="Coming Soon" />
+          <h3><a href="ideantology.html" target="_blank">Coming Soon</a></h3>
+          <p>A future AI project using a complex yet simple modern tech stack. Stay tuned!</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="work" class="section">
-        <h2>Featured work</h2>
-        <p>
-            <ul class="project-list">
-                <li><strong>Ideantology</strong> - A personal philosophy turned digital brand.</li>
-                <li><strong>Impact Project</strong> - A practical build to demonstrate technical skill (Coming Soon).</li>
-                <li><strong>Portfolio Website</strong> - Designed and coded by me, inspired by professionals.</li>
-            </ul>
-        </p>
-    </section>
+  <!-- Clients Section -->
+  <section id="clients" class="section">
+    <h2>Clients & Collaborations</h2>
+    <p>
+      While I'm early in my career, I aim to collaborate with startups, civic tech projects, and socially driven brands
+      – where thoughtful technology makes a difference.
+    </p>
+  </section>
 
-    <section id="clients" class="section">
-        <h2>Clients & Collaborations</h2>
-        <p>
-            While I'm early in my career, I aim to collaborate with startups, civic tech projects, and socially driven brands - where thoughtful technology makes a difference.
-        </p>
-    </section>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section">
+    <h2>Testimonials</h2>
+    <p>
+      "Kay is driven, technically curious, and always willing to learn. He brings energy and intent into everything he
+      touches." – Student Mentor
+    </p>
+  </section>
 
-    <section id="testimonials" class="section">
-        <h2>Testimonials</h2>
-        <p>
-            "Kay is driven, technically curious, and always willing to learn. He brings energy and intent into everything he touches." - A colleague
-        </p>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+  <div class="container">
+    <h2>Let's Connect</h2>
+    <p>If you'd like to connect, collaborate, or just say hi, feel free to reach out!</p>
+    
+    <form action="mailto:223531482@tut4life.ac.za" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
 
-    <section id="contact" class="section">
-        <h2>Let's Connect</h2>
-        <p>Email: <a href="mailto:kaythuhlo@gmail.com">kaythuhlo@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/thuhlokay/" target="_blank">github.com/thuhlokay</a></p>
-    </section>
+    <div class="contact-links">
+      <p>GitHub: <a href="https://github.com/thuhlokay/" target="_blank">thuhlokay</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/thuhlokay/" target="_blank">LinkedIn Profile</a></p>
+    </div>
+  </div>
+</section>
 
-    <footer class="footer">
-        <p>&copy; 2025 Kay Thuhlo-Cakeni. All rights reserved. "Ideantology" is a registered trademark.</p>
-    </footer>
 
-    <script>
-        const navbar = document.getElementById('navbar');
-        let lastScrollTop = 0;
+ <!-- Chatbot Bubble Button -->
+<div id="chatbot-toggle" onclick="toggleChatbot()">💬</div>
 
-        window.addEventListener("scroll", () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const heroHeight = document.querySelector(".hero").offsetHeight;
+<!-- Chatbot Widget (initially hidden) -->
+<div id="chatbot-widget" class="hidden">
+  <div id="chatbot-header">
+    AI Support Chat
+    <span id="chatbot-close" onclick="toggleChatbot()">✖</span>
+  </div>
+  <div id="chatlog"></div>
+  <div id="chatbot-input">
+    <input type="text" id="userInput" placeholder="Ask me anything..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
 
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                navbar.classList.add("hidden");
-            } else {
-                navbar.classList.remove("hidden");
-            }
 
-            if(scrollTop > heroHeight - 80) {
-                navbar.classList.add("solid");
-            }else {
-                navbar.classList.remove("solid");
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  <!-- Scripts -->
+  <script>
+    function toggleMobileMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    window.addEventListener("scroll", () => {
+      const navLinks = document.querySelector('.nav-links');
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
+    });
+
+    function toggleChatbot() {
+      const widget = document.getElementById('chatbot-widget');
+      const bubble = document.getElementById('chatbot-bubble');
+
+      if (widget.classList.contains('hidden')) {
+        widget.classList.remove('hidden');
+        bubble.style.display = 'none';
+      } else {
+        widget.classList.add('hidden');
+        bubble.style.display = 'flex';
+      }
+    }
+
+    async function sendMessage() {
+      const userInput = document.getElementById('userInput');
+      const chatlog = document.getElementById('chatlog');
+      const message = userInput.value.trim();
+
+      if (!message) return;
+
+      chatlog.innerHTML += `<div><strong>You:</strong> ${message}</div>`;
+      userInput.value = "";
+      userInput.disabled = true;
+
+      try {
+        const response = await fetch("http://localhost:8080/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message }),
         });
-    </script>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
+        const data = await response.json();
+        chatlog.innerHTML += `<div><strong>Bot:</strong> ${data.response}</div>`;
+      } catch (error) {
+        chatlog.innerHTML += `<div style="color:red;"><strong>Bot:</strong> Error connecting to AI. Please contact Kay for assistance.</div>`;
+      }
 
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
-        });
-    </script>
+      userInput.disabled = false;
+      chatlog.scrollTop = chatlog.scrollHeight;
+    }
+  </script>
+
+  <script>
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > 50) {
+      // Scrolling down - remove background (make transparent)
+      navbar.classList.remove('scrolled');
+    } else {
+      // Scrolling up or near top - add background
+      navbar.classList.add('scrolled');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+
+  // Initialize navbar background on page load
+  window.addEventListener('load', () => {
+    if(window.pageYOffset > 50){
+      navbar.classList.add('scrolled');
+    }
+  });
+</script>
 
 </body>
+
 </html>
