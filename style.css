@@ -1,3 +1,13 @@
+:root {
+  --color-primary: #101820;
+  --color-light: #FFFFFF;
+  --color-accent: #FAD79F;
+  --color-secondary: #8A8D8F;
+  --color-background: #D5D3CF;
+  --color-rail: #667C89;
+  --color-skin: #F2C9A3;
+}
+
 
 @media (max-width: 768px) {
   .about h2 {
@@ -10,8 +20,6 @@
 }
 
 
-
-/* Reset and Base */
 * {
     margin: 0;
     padding: 0;
@@ -20,8 +28,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--color-background);
+    color: var(--color-primary);
     scroll-behavior: smooth;
     line-height: 1.6;
     margin: 0;
@@ -32,20 +40,20 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px 0;
   z-index: 1000;
-  background-color: transparent;
+  background-color: var(--color-primary);
   transition: background-color 0.4s ease;
 }
 
-/* When scrolling up or at top, add background */
 .navbar.scrolled {
-  background-color: transparent;
+  background-color: var(--color-primary);
 }
 
 
@@ -68,24 +76,33 @@ html, body {
     padding-left: 0;
 }
 
-/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
     gap: 20px;
 }
 
 .nav-links li a {
-    color: white;
+    color: var(--color-light);
     text-decoration: none;
     font-weight: 600;
+    width: 100%;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1rem;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
     text-decoration: underline;
+    color: var(--color-accent);
 }
 
-/* Mobile menu icon */
 .mobile-menu-icon {
     display: none;
     font-size: 26px;
@@ -93,7 +110,6 @@ html, body {
     color: white;
 }
 
-/* Mobile nav */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -121,8 +137,6 @@ html, body {
     }
 }
 
-/* Hero Section */
-/* Hero Section Layout */
 .hero {
   background: linear-gradient(to bottom left, white, gray, white);
   color: white;
@@ -133,7 +147,7 @@ html, body {
   text-align: center;
 }
 
-/* Hero Content (text + button) */
+
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -141,19 +155,17 @@ html, body {
   gap: 15px;
 }
 
-/* Hero Heading */
+
 .hero h1 {
   font-size: 3rem;
 }
 
-/* Hero Description */
 .hero p {
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* Get in Touch Button */
 .hero .btn {
   margin-top: 10px;
 }
@@ -175,7 +187,6 @@ html, body {
     margin: 0 auto 1.5rem;
 }
 
-/* Hero image container for layout control */
 .hero-img-wrapper {
     margin-top: 20px;
 }
@@ -187,7 +198,6 @@ html, body {
     display: block;
 }
 
-/* Desktop Hero layout: side-by-side */
 @media (min-width: 769px) {
     .hero {
         flex-direction: row;
@@ -216,23 +226,31 @@ html, body {
     }
 }
 
-/* Sections */
 .section {
     padding: 80px 20px;
+    background-color: var(--color-light);
+
 }
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
 
 .container {
     max-width: 1200px;
     margin: auto;
 }
 
-/* Headings */
+
 h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    
 }
 
-/* About */
 .about {
   background-color: white;
   padding: 80px 20px;
@@ -247,7 +265,7 @@ h2 {
 .about h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: gray; /* your accent color */
+  color: gray; 
   text-align: left;
 }
 
@@ -259,16 +277,17 @@ h2 {
 }
 
 
-/* Project Grid */
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
-/* Project Cards */
+
 .project-card {
-    background: white;
+    background-color: var(--color-light);
+    border: 1px solid var(--color-secondary);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -276,7 +295,6 @@ h2 {
     text-align: center;
 }
 
-/* Scale down project images */
 .project-card img {
     width: 100%;
     max-width: 200px;
@@ -285,10 +303,8 @@ h2 {
     display: block;
 }
 
-/* Contact Section */
-/* Contact Section */
 .contact {
-  background: #FAF9FF;
+  background-color: var(--color-background);
   padding: 90px 20px;
   border-top: 1px solid #eee;
 }
@@ -340,9 +356,6 @@ form textarea {
   resize: vertical;
 }
 
-/* Contact button is already styled with .btn */
-
-/* Contact links */
 .contact-links {
   text-align: center;
   color: #444;
@@ -359,12 +372,10 @@ form textarea {
   color: #FF6F61;
 }
 
-
-/* Buttons */
 .btn {
     padding: 10px 20px;
-    background-color: white;
-    color: gray;
+    background-color: var(--color-primary);
+    color: var(--color-light);
     border: none;
     border-radius: 6px;
     text-decoration: none;
@@ -374,10 +385,10 @@ form textarea {
 }
 
 .btn:hover {
-    background-color: #f0f0f0;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
 }
 
-/* Chatbot Bubble */
 #chatbot-bubble {
     position: fixed;
     bottom: 20px;
@@ -396,14 +407,13 @@ form textarea {
     z-index: 10000;
 }
 
-/* Chatbot Widget */
 #chatbot-widget {
     position: fixed;
     bottom: 80px;
     right: 20px;
     width: 300px;
     max-height: 400px;
-    background: white;
+    background: var(--color-primary);
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -413,15 +423,13 @@ form textarea {
     z-index: 9999;
 }
 
-/* Hide chat widget initially */
 .hidden {
     display: none;
 }
 
-/* Chatbot Header */
 #chatbot-header {
-    background: gray;
-    color: white;
+    background: var(--color-background);
+    color: var(--color-primary);
     padding: 10px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -430,7 +438,6 @@ form textarea {
     user-select: none;
 }
 
-/* Chat log */
 #chatlog {
     flex: 1;
     padding: 10px;
@@ -442,7 +449,7 @@ form textarea {
     margin-bottom: 10px;
 }
 
-/* Chatbot input area */
+
 #chatbot-input {
     display: flex;
     border-top: 1px solid #ccc;
@@ -457,7 +464,7 @@ form textarea {
 }
 
 #chatbot-input button {
-    background: gray;
+    background: var(--color-primary);
     color: white;
     border: none;
     padding: 10px;
@@ -473,17 +480,14 @@ form textarea {
     background: indigo;
 }
 
-
-
-/* Chatbot Toggle Button (bubble) */
 #chatbot-toggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
   width: 60px;
   height: 60px;
-  background: gray;
-  color: white;
+  background: var(--color-background);
+  color: var(--color-primary);
   border-radius: 50%;
   font-size: 30px;
   display: flex;
@@ -494,14 +498,75 @@ form textarea {
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-/* Hide/Show Chatbot */
 #chatbot-widget.hidden {
   display: none;
 }
 
-/* Close button inside header */
 #chatbot-close {
   float: right;
   cursor: pointer;
   font-size: 16px;
+}
+
+
+
+.mobile-nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-primary);
+  z-index: 9999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+
+.mobile-nav-overlay.active {
+  display: flex;
+}
+
+.mobile-nav-overlay .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: var(--color-light);
+  cursor: pointer;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-nav-links li {
+  margin: 20px 0;
+}
+
+.mobile-nav-links a {
+  color: var(--color-light);
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.mobile-nav-links a:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: none !important;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
 }

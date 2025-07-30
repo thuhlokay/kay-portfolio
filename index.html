@@ -12,7 +12,7 @@
 <body>
   <header class="navbar">
     <div class="container">
-      <img src="assets/logo.png" alt="Kay Logo" class="logo" />
+      <a href="#"><img src="assets/logo.png" alt="Kay Logo" class="logo" /></a>
       <nav>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -23,13 +23,25 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
-          <span class="hamburger" id="hamburger">&#9776;</span>
-        </div>
+  <span class="hamburger" id="hamburger">&#9776;</span>
+</div>
+
+<div class="mobile-nav-overlay" id="mobileNav">
+  <span class="close-btn" onclick="toggleMobileMenu()">&times;</span>
+  <ul class="mobile-nav-links">
+    <li><a href="#about" onclick="toggleMobileMenu()">About</a></li>
+    <li><a href="#experience" onclick="toggleMobileMenu()">Experience</a></li>
+    <li><a href="#projects" onclick="toggleMobileMenu()">Work</a></li>
+    <li><a href="#clients" onclick="toggleMobileMenu()">Clients</a></li>
+    <li><a href="#testimonials" onclick="toggleMobileMenu()">Testimonials</a></li>
+    <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+  </ul>
+</div>
+
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-img-wrapper">
       <img src="assets/kay-profile.jpg" alt="Kay Profile Image" class="hero-img" />
@@ -46,7 +58,6 @@
     
   </section>
 
-  <!-- About Section -->
   <section id="about" class="about">
   <div class="container">
     <h2>About Me</h2>
@@ -62,8 +73,6 @@
   </div>
 </section>
 
-
-  <!-- Experience Section -->
   <section id="experience" class="section">
     <div class="container">
       <h2>Experience</h2>
@@ -74,7 +83,6 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="section projects">
     <div class="container">
       <div class="project-grid">
@@ -99,7 +107,6 @@
     </div>
   </section>
 
-  <!-- Clients Section -->
   <section id="clients" class="section">
     <h2>Clients & Collaborations</h2>
     <p>
@@ -108,7 +115,6 @@
     </p>
   </section>
 
-  <!-- Testimonials Section -->
   <section id="testimonials" class="section">
     <h2>Testimonials</h2>
     <p>
@@ -117,7 +123,6 @@
     </p>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="contact">
   <div class="container">
     <h2>Let's Connect</h2>
@@ -138,10 +143,9 @@
 </section>
 
 
- <!-- Chatbot Bubble Button -->
 <div id="chatbot-toggle" onclick="toggleChatbot()">💬</div>
 
-<!-- Chatbot Widget (initially hidden) -->
+
 <div id="chatbot-widget" class="hidden">
   <div id="chatbot-header">
     AI Support Chat
@@ -155,12 +159,12 @@
 </div>
 
 
-  <!-- Scripts -->
   <script>
     function toggleMobileMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('active');
-    }
+  const mobileNav = document.getElementById("mobileNav");
+  mobileNav.classList.toggle("active");
+}
+
 
     window.addEventListener("scroll", () => {
       const navLinks = document.querySelector('.nav-links');
@@ -219,17 +223,14 @@
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop && scrollTop > 50) {
-      // Scrolling down - remove background (make transparent)
       navbar.classList.remove('scrolled');
     } else {
-      // Scrolling up or near top - add background
       navbar.classList.add('scrolled');
     }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 
-  // Initialize navbar background on page load
   window.addEventListener('load', () => {
     if(window.pageYOffset > 50){
       navbar.classList.add('scrolled');
